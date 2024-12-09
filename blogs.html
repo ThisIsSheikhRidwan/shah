@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Shahadat Portfolio</title>
+        <link rel="stylesheet" href="styles.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=Material+Symbols+Outlined&display=swap" rel="stylesheet" />
+       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        <!-- Header Section -->
+        <section class="sub-header">
+            <nav>
+                <a href="index.html"><img src="images/logo.svg" alt="Logo"></a>
+                <div class="nav-links" id="navLinks">
+                    <span class="material-symbols-outlined" onclick="hideMenu()">close</span>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="blogs.html">Blogs</a></li>
+                        <li><a href="contact me.html">Contact Me</a></li>
+                    </ul>
+                </div>
+                <span class="material-symbols-outlined" onclick="showMenu()">menu</span>
+            </nav>
+             <h1>BLOGS</h1>
+        </section>
+        
+        <!------blogs------>
+    <section class="blog">
+            <h1>This is my blogs of my cars</h1>
+            <p>Three Eras Of Car Technology</p>
+            <div class="row">
+                <div class="blog-col">
+                    <h3>The Early Era (1886-1945)</h3>
+                    <p>This era saw the invention of the internal combustion engine 
+                        and the birth of the automobile, followed by Henry Ford's revolutionary assembly
+                        line that made cars accessible to the masses.</p>
+                </div>   
+                <div class="blog-col">
+                    <h3>The Modern Era (1945-2010)</h3> 
+                    <p>This era witnessed significant advancements in comfort and safety features,
+                        with innovations like power steering, air conditioning, 
+                        and anti-lock brakes becoming commonplace.</p>
+                </div>  
+                <div class="blog-col">
+                    <h3>The Digital Era (2010-Present)</h3> 
+                    <p>This era is characterized by connectivity, autonomous driving technologies, 
+                        and the rise of electric vehicles, transforming cars
+                        into intelligent and connected machines.</p>
+                </div>  
+            </div>
+        </section>
+
+        
+        <section class="footer">
+        <h4>About Myself</h4>
+            <p>My name is Shahadat Sah Ahmed Zafor.<br>I'm currently studying at Tokyo International University in Japan.
+            <br>I love cars a lot and I want to get 10 sports cars in the future. by my job.
+            </p>
+            <div class="icons">
+            <i class="fa fa-facebook-official" ></i>
+            <i class="fa fa-instagram" ></i>
+            <i class="fa fa-snapchat" ></i>
+            </div>
+            <p> Shahadat Sah Ahmed Zafor<br>Roll:23229044</p>
+        </section>
+
+
+        <!-- JavaScript for Toggle Menu -->
+        <script>
+            const navLinks = document.getElementById("navLinks");
+
+            function showMenu() {
+                navLinks.style.right = "0"; // Slide menu into view
+            }
+
+            function hideMenu() {
+                navLinks.style.right = "-200px"; // Slide menu out of view
+            }
+
+            // Hide menu for larger screens
+            window.addEventListener('resize', () => {
+                if (window.innerWidth > 1200) {
+                    navLinks.style.right = "0"; // Keep menu hidden
+                    navLinks.style.display = "none"; // Hide nav for desktops
+                } else {
+                    navLinks.style.display = "block"; // Show nav for smaller screens
+                }
+            });
+        </script>
+    </body>
+</html>

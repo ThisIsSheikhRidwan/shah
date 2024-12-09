@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Shahadat Portfolio</title>
+        <link rel="stylesheet" href="styles.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=Material+Symbols+Outlined&display=swap" rel="stylesheet" />
+       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        <!-- Header Section -->
+        <section class="sub-header">
+            <nav>
+                <a href="index.html"><img src="images/logo.svg" alt="Logo"></a>
+                <div class="nav-links" id="navLinks">
+                    <span class="material-symbols-outlined" onclick="hideMenu()">close</span>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="blogs.html">Blogs</a></li>
+                        <li><a href="contact me.html">Contact Me</a></li>
+                    </ul>
+                </div>
+                <span class="material-symbols-outlined" onclick="showMenu()">menu</span>
+            </nav>
+             <h1>ABOUT MYSELF</h1>
+        </section>
+        
+        <!------about myself content------>
+        <section class="about-us">
+        <div class=row>
+            <div class="about-col">
+            <h1>Why I Love Cars</h1>
+                <p>
+                Cars have always fascinated me—not just as vehicles of transportation but as masterpieces of engineering and design.<br>
+There’s something exhilarating about the roar of a powerful engine, the sleek lines of a well-crafted body, and the endless innovation that drives the automotive industry forward.<br>
+Whether it's the nostalgia of classic muscle cars or the cutting-edge technology of electric vehicles, I find myself drawn to every aspect of the automobile world.<br>
+Cars represent freedom, speed, and creativity, blending art with science in a way that captures my imagination.<br>
+For me, they’re more than machines—they’re a passion that never fades.
+                </p>
+                <a href="" class="hero-btn red-btn">Contact Me</a>
+            </div>
+            <div class="about-col">
+                <img src="images/car.svg">
+            </div>
+            </div>
+        </section>
+        
+        <section class="footer">
+        <h4>About Myself</h4>
+            <p>Lorem ipsum</p>
+            <div class="icons">
+            <i class="fa fa-facebook-official" ></i>
+            <i class="fa fa-instagram" ></i>
+            <i class="fa fa-snapchat" ></i>
+            </div>
+            <p> Shahadat Sah Ahmed Zafor<br>Roll:23229044</p>
+        </section>
+
+
+        <!-- JavaScript for Toggle Menu -->
+        <script>
+            const navLinks = document.getElementById("navLinks");
+
+            function showMenu() {
+                navLinks.style.right = "0"; // Slide menu into view
+            }
+
+            function hideMenu() {
+                navLinks.style.right = "-200px"; // Slide menu out of view
+            }
+
+            // Hide menu for larger screens
+            window.addEventListener('resize', () => {
+                if (window.innerWidth > 1200) {
+                    navLinks.style.right = "0"; // Keep menu hidden
+                    navLinks.style.display = "none"; // Hide nav for desktops
+                } else {
+                    navLinks.style.display = "block"; // Show nav for smaller screens
+                }
+            });
+        </script>
+    </body>
+</html>
